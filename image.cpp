@@ -244,7 +244,7 @@ void convert_polygons_to_images(vector<contour> polygons[], int nplanes, const m
 		PolygonToRasterVertical(polygons[k], image, dpi, mesh->getBottomLeftVertex().x, mesh->getBottomLeftVertex().y, 125);
 
 		char filename[256];
-		sprintf(filename, "layer_%03d.pgm", k);
+		sprintf(filename, "../input/sliced/layer_%03d.pgm", k);
 		printf("\n\nwriting image: %s\n", filename);
 		write_image(image, filename);
 		free_image(image);
